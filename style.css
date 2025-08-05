@@ -1,0 +1,273 @@
+/*
+  Global styling for the Hola Loop website.
+  We use CSS variables for easy theming and Poppins for a modern, friendly vibe.
+*/
+:root {
+  --color-primary: #ff944d; /* Warm orange for primary accents */
+  --color-secondary: #ffc04d; /* Soft yellow for highlights */
+  --color-accent: #005f56; /* Deep teal for text and buttons */
+  --color-background: #fff6e6; /* Light cream background */
+  --color-light: #ffffff;
+  --color-dark: #333333;
+  --font-family-base: 'Poppins', sans-serif;
+  --transition-fast: 0.2s ease-in-out;
+}
+
+/* Reset margin and padding for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-accent);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--color-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .logo img {
+  vertical-align: middle;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+  transition: var(--transition-fast);
+}
+
+.cta-link {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 20px;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.cta-link:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-light);
+  clip-path: ellipse(100% 75% at 50% 50%);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.button.primary {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+}
+
+.button.primary:hover {
+  background-color: var(--color-light);
+  color: var(--color-accent);
+}
+
+.button.secondary {
+  background-color: var(--color-light);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.button.secondary:hover {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+}
+
+/* Features section */
+.features {
+  padding: 3rem 2rem;
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-accent);
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 1.5rem;
+  background-color: var(--color-background);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.feature h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.feature p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-dark);
+}
+
+/* About section */
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-dark);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-light);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  margin-top: auto;
+}
+
+/* Chat page styles */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.chat-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.chat-description {
+  font-size: 1rem;
+  color: var(--color-dark);
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.video-container video {
+  width: 360px;
+  max-width: 100%;
+  height: 240px;
+  background-color: var(--color-dark);
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-msg {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  min-height: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .feature-list {
+    flex-direction: column;
+  }
+  .video-container video {
+    width: 100%;
+    height: auto;
+  }
+}

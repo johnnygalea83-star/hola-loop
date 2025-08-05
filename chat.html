@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hola Loop Chat</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Defer the script so it executes after the DOM loads -->
+    <script defer src="chat.js"></script>
+  </head>
+  <body class="chat-page">
+    <header class="chat-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img
+            src="logo.png"
+            alt="Hola Loop logo"
+            width="40"
+            height="40"
+          />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="chat-container">
+      <h1>Start a Chat</h1>
+      <p class="chat-description">
+        Click <strong>Start Chat</strong> to begin talking. Your camera and
+        microphone will turn on automatically. For full random chat
+        functionality, you'll need to integrate a WebRTC signalling server and
+        match users. This page demonstrates the interface and local media
+        capture.
+      </p>
+      <div class="video-container">
+        <video id="localVideo" autoplay muted playsinline></video>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </div>
+      <div class="controls">
+        <button id="startBtn" class="button primary">Start Chat</button>
+        <button id="stopBtn" class="button secondary">Stop Chat</button>
+        <p id="status" class="status-msg"></p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Hola Loop. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
