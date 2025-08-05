@@ -8,7 +8,8 @@
 // YOUR_CHANNEL_ID constant below with your actual channel ID. You can
 // obtain a channel ID by signing up at https://www.scaledrone.com/.
 
-const CHANNEL_ID = 'YOUR_CHANNEL_ID'; // TODO: Replace with your Scaledrone channel ID
+// Set your Scaledrone channel ID. Replace with your own Channel ID obtained from scaledrone.com
+const CHANNEL_ID = 'RQvKFGxvp5e2V6Wz'; // Added real channel ID for random-match chat
 const MATCH_ROOM = 'observable-match';
 
 const localVideo = document.getElementById('localVideo');
